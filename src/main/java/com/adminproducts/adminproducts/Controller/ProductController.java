@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,5 +40,10 @@ public class ProductController {
     @GetMapping
     public List<Products> getAllProducts() {
         return service.getAllProducts();
+    }
+
+    @GetMapping("/test")
+    public List<String> testApi() {
+        return Arrays.asList("This", "is", "a", "testing", "api");
     }
 }
