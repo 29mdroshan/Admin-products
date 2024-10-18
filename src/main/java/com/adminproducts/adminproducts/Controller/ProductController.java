@@ -41,9 +41,5 @@ public class ProductController {
     public List<Products> getAllProducts() {
         return service.getAllProducts();
     }
-
-    @GetMapping("/test")
-    public List<String> testApi() {
-        return Arrays.asList("This", "is", "a", "testing", "api");
-    }
+    
 }
