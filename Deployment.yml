@@ -11,10 +11,13 @@ spec:
     metadata:
       labels:
         app: admin-products
+      annotations:
+        image-pull-date: "latest"
     spec:
       containers:
         - name: admin-products
           image: 29roshan/admin-product:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
 ---
